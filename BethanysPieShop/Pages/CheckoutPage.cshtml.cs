@@ -14,6 +14,7 @@ namespace BethanysPieShop.Pages
             _orderRepository = orderRepository;
             _shoppingCart = shoppingCart;
         }
+        [BindProperty]
         public Order Order { get; set; }
         public void OnGet()
         {
