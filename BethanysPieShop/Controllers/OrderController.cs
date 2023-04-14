@@ -1,14 +1,15 @@
 ﻿using BethanysPieShop.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BethanysPieShop.Controllers
 {
+    [Authorize]   
     public class OrderController : Controller
     {
 
         private readonly IOrderRepository _orderRepository;
         private readonly IShoppingCart _shoppingCart;
-       
         public OrderController(IOrderRepository orderRepository, IShoppingCart shoppingCart)
         {
             _orderRepository = orderRepository;
